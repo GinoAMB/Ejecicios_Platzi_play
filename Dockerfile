@@ -1,6 +1,6 @@
 # Esta 1: Buil con Gradle 8.1.3 y JDK 21 (compilacion)
 FROM gradle:8.14.3-jdk21 AS build
-COPY --chowm=gradle:gradle . /app
+COPY --chown=gradle:gradle . /app
 WORKDIR /app
 RUN gradle bootJar --no-daemon
 
